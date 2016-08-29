@@ -15,13 +15,17 @@ def main():
     if path is None:
         path = os.getcwd()
     
-    #print("exec i3-sensible-terminal -cd " + path)
-
     do_cmd("split v")
+    do_cmd("exec i3-sensible-terminal -cd " + path)
+    do_cmd("split v")
+    do_cmd("layout tabbed")
+    do_cmd("exec i3-sensible-terminal -cd " + path)
+    do_cmd("exec i3-sensible-terminal -cd " + path)
     do_cmd("exec i3-sensible-terminal -cd " + path)
     do_cmd("focus up")
     do_cmd("split v")
     do_cmd("layout tabbed")
+    do_cmd("exec i3-sensible-terminal -cd " + path)
     do_cmd("exec i3-sensible-terminal -cd " + path)
     do_cmd("exec i3-sensible-terminal -cd " + path)
     do_cmd("focus left")
